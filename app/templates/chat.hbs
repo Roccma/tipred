@@ -1,0 +1,80 @@
+<header>
+	<div class = "contenedorHeader">
+		<img src = "img/red tip logo.png" class = "imgHeader"/>		
+		<div class="input-group input-group-buscar">
+	     	<input type="text" class="form-control" id= "txtBuscarContacto" placeholder="Buscar contacto..." onkeypress={{action 'crearSala'}} />	  
+	     	<span class="input-group-btn">
+		        <button class="btn btn-default" type="button" onclick = {{action 'buscar'}}><i class = "glyphicon glyphicon-search"></i></button>
+		    </span>    
+	    </div>
+	    <div class = "contenedorMiPerfil">
+	    	<div class = "nombreSession">
+	    	</div>
+	    	<img class = "imgPerfil"/>	    	
+	    </div>
+	    <div class = "contenedorCerrarSesion">
+	    	<i class = "glyphicon glyphicon-log-out"></i>
+	    </div>
+	</div>
+</header>
+<div class = "main">
+	<div class = "contenedorMain">
+		<div class = "contenedorContactos">
+			<div class = "contenedorContacto">
+				<center><h3><b>Contactos</b></h3></center>
+				<br>
+			</div>
+		</div>
+		<div class = "contenedorChat">
+			<div class = "contenedorNoCharla">
+				<center><h2><b>Para comenzar a utilizar el chat, puede:</b></h2></center>
+				<br>
+				<div class = "contenedorOpciones">					
+					<h3><i class = "glyphicon glyphicon-search"></i> Buscar un contacto</h3>
+					<h3><i class = "glyphicon glyphicon-user"></i> Seleccionar un contacto de la lista</h3>
+					<br>
+					<img src = "img/chat.png" class = "imgChatNoCharla"/>
+				</div>
+			</div>
+			<div class = "contenedorCharla">
+				<div class = "charlaDestinatario">
+					<div class = "contenedorImagen">
+						<img src = "https://soygrowers.com/wp-content/uploads/2017/02/default_bio_600x600.jpg" class = "imgChat"/>
+					</div>
+					<div class = "contenedorNombreChat">
+						Mauro Rocca
+					</div>
+				</div>
+				<div class = "charlaMensajes" id = "charlaMensajes">
+					<!--
+					<div class = "chatMensajeMio">
+						<div class = "chatFlechaMia"></div>
+						<div class = "chatContenidoMensajeMio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet blandit urna non aliquet. Pellentesque ac ultrices mi, vel semper turpis. Quisque vel arcu at sem tincidunt finibus. Morbi et malesuada nunc, a eleifend neque. Quisque libero dui, faucibus nec auctor eu, tincidunt et ante. Mauris lacus nibh, dictum luctus vulputate posuere, pulvinar varius nisl. Nullam ultricies mauris nec posuere ultrices. Vivamus at vehicula augue. Nullam nec ultricies sem. Cras blandit ipsum diam, sit amet fermentum dui consectetur eu. Donec a odio dictum, bibendum lorem vel, imperdiet quam.</div>
+						
+						<div class = "chatHoraMia">15/08/1995 10:15</div>
+					</div>
+					<div class = "chatMensajeOtro">
+						<div class = "chatFlechaOtro"></div>
+						<div class = "chatContenidoMensajeOtro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet blandit urna non aliquet. Pellentesque ac ultrices mi, vel semper turpis. Quisque vel arcu at sem tincidunt finibus. Morbi et malesuada nunc, a eleifend neque. Quisque libero dui, faucibus nec auctor eu, tincidunt et ante. Mauris lacus nibh, dictum luctus vulputate posuere, pulvinar varius nisl. Nullam ultricies mauris nec posuere ultrices. Vivamus at vehicula augue. Nullam nec ultricies sem. Cras blandit ipsum diam, sit amet fermentum dui consectetur eu. Donec a odio dictum, bibendum lorem vel, imperdiet quam.</div>
+						
+						<div class = "chatHoraOtro">15/08/1995 10:15</div>
+					</div>-->
+				</div>
+				<div class = "charlaEscribir" style = "height: 7%; background: #F5F5F5">
+					<div class = "contenedorInputEscribir">
+						{{input type = "text" class = "form-control" placeholder = "Escribe un mensaje aquí..." value = contenido id = "contenido"}}
+						<!--<input type = "text" class = "form-control" placeholder="Escribe un mensaje aquí..." id="txtEscribir"/>-->
+						
+					</div>
+					<div class = "contenedorIconoEscribir" {{action "enviar"}}>
+						<i class="glyphicon glyphicon-send"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	Red TIP | 2017
+</footer>
+{{outlet}}

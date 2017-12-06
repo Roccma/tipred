@@ -1,0 +1,171 @@
+<div id="brillo"></div>
+<img src = "img/cabecera.png" style = "z-index: 100; position: relative; width: 100%"/>
+<div class="container">
+
+	<div class="row tituloBienvenida">
+		<div class="col-md-12">
+			<center><h1 style="font-weight: bold; font-size: 38px">¡Bienvenido a RED TIP!</h1></center>		
+		</div>
+	</div>
+	<br><br>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="container">
+				<!--<form style="width: 100%;">-->
+					<div class="row">
+						<div class="col-md-4"></div>
+						<div class="col-md-4 form-group">
+							<label for="emailLogin" style = "font-size: 17px; text-align: left; display: block;" class="control-label"><span class = "glyphicon glyphicon-user"></span>&nbsp;&nbsp;Correo electrónico</label>
+							{{input type="text" class="form-control inputBienvenida" id="emailLogin" value=email}}
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-4"></div>
+						<div class="col-md-4 form-group">
+							<label for="passwordLogin" style = "font-size: 17px; text-align: left; display: block;" class="control-label"><span class="glyphicon glyphicon-lock"></span>&nbsp;&nbsp;Contraseña</label>
+							{{input type="password" class="form-control inputBienvenida" id="passwordLogin" value=password}}
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+					<br><br>
+					<div class="row">
+						<div class="col-md-4"></div>
+						<div class="col-md-4">
+							<button class="btn btn-primary btnBienvenida btnIngresarBienvenida" style="width: 100%" {{action 'login'}}><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Ingresar</button>
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+					<div style="text-align: center;" class="row">
+						<div class="col-md-4"></div>
+						<div class="col-md-4">
+							<button class="btn btn-success btnBienvenida" style="width: 100%" data-toggle="modal" data-target="#modalRegistro"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Registrarse</button>
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+					<br>
+					<div class = "row rowAlert"  style = "display: none">
+						<div class = "col-md-4"></div>
+						<div class = "col-md-4">
+							<div class = "alert alert-danger" id = "alertLogin" style = "text-align: center; font-size: 17px">
+								<strong>ERROR:</strong> Credenciales incorrectas
+							</div>
+						</div>
+						<div class = "col-md-4"></div>
+					</div>
+				<!--</form>-->
+			</div>
+		</div>
+	</div>	
+</div>
+<div class = "modal fade" id = "modalRegistro">
+	<div class = "modal-dialog" role = "document">
+		<div class = "modal-content">
+			<div class = "modal-header">
+				<label style = "font-size: 22px">Nuevo usuario</label>
+				<button type = "button" class = "close" data-dismiss = "modal" aria-label = "Close">
+					<span aria-hidden = "true">&times;</span>
+				</button>
+			</div>
+			<div class = "modal-body">
+				<table style = "width: 100%" id = "tblRegistro">
+					<tr>
+						<td colspan="2">
+							<label for = "nickname">Nickname <span style="color:red">*</span></label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							{{input type="text" class="form-control" id="nickname" value=nickname}}<br>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<label for = "nickname">Correo electrónico <span style="color:red">*</span></label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							{{input type="text" class="form-control" id="email" value=email}}<br>
+						</td>
+					</tr>
+					<tr>
+						<td><label for = "password">Contraseña <span style="color:red">*</span></label></td>
+						<td><label for = "confirmPassword">Confirmar contraseña <span style="color:red">*</span></label></td>
+					</tr>
+					<tr>
+						<td>
+							{{input type="password" class="form-control" id="password" value=password}}<br>
+						</td>
+						<td>
+							{{input type="password" class="form-control" id="confirmPassword"}}<br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for = "facebook">Facebook</label>
+						</td>
+						<td>
+							<label for = "twitter">Twitter</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							{{input type="text" class="form-control" id="facebook" value=facebook}}<br>
+						</td>
+						<td>
+							{{input type="text" class="form-control" id="twitter" value=twitter}}<br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for = "instagram">Instagram</label>
+						</td>
+						<td>
+							<label for = "linkedin">LinkedIn</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							{{input type="text" class="form-control" id="instagram" value=instagram}}<br>
+						</td>
+						<td>
+							{{input type="text" class="form-control" id="linkedin" value=linkedin}}<br>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div id = "divImgPerfil">
+								<img src = "https://soygrowers.com/wp-content/uploads/2017/02/default_bio_600x600.jpg" class ="image circle" id = "imgPerfil"/>
+
+								
+								<label class="btn btn-success" style="margin-top: 15px;width: 100%">Cambiar foto<input id="fotoPerfil" name="fotoPerfil" type="file" style="display: none;" accept="image/jpg,image/png,image/jpg,image/gif,image/jpg,image/jpeg,image/bmp" onchange={{action "cargarFoto"}} />
+								</label>
+							</div>
+							<br><br><br>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div class = "alert alert-danger" id = "registro_campoObligatorio" style = "margin-top: 20px; display: none; text-align: center">
+								<b>ERROR</b>&nbsp;No se han ingresado campos obligatorios
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class = "modal-footer">
+				<div id = "contenedorEspere" class = "contenedorEspere">
+					<label style = "float: left; padding-top: 7px; font-size: 14px">Por favor, espere un momento...</label>
+				</div>
+				<button type = "button" class = "btn btn-default" data-dismiss = "modal">Cancelar</button>
+				<button type = "button" class = "btn btn-primary" {{action 'sign_up'}}>Aceptar</button>
+				
+				
+			</div>
+		</div>
+	</div>	
+</div>
+
+{{outlet}}

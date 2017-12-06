@@ -1,0 +1,457 @@
+body{
+	background: url('/img/hexellence.png');
+}
+
+@keyframes brillo {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#brillo {
+	background: rgba(250,250,250,.6);
+	position: 	fixed;
+	top:		0;
+	bottom:		0;
+	left: 		0;
+	right: 		0;
+	z-index: 	0;
+	animation: brillo 5s infinite;
+}
+.container {
+	position: relative;
+	z-index: 100;
+}
+
+.tituloBienvenida{
+	margin-top: 30px;
+}
+
+.inputBienvenida{
+	padding: 15px 10px;
+	font-size: 17px;
+}
+
+.btnBienvenida{
+	padding: 7px 10px;
+	font-size: 17px;
+	box-sizing: border-box;
+}
+
+.btnIngresarBienvenida{
+	margin-bottom: 10px;
+}
+
+#tblRegistro tr{
+	padding-bottom: 10px;
+}
+
+#tblRegistro tr td{
+	padding: 0px 15px;
+}
+
+#imgPerfil{
+	width:100%;
+	height: 100%;
+	border-radius: 50%;
+	margin: 0 auto;
+
+}
+
+#divImgPerfil{
+	width: 140px;
+	height: 140px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+.contenedorEspere{
+	height: 35px;
+	width: 50%;
+	display: inline-block;
+	float: left;
+}
+
+.spinner{
+	height: 35px;
+	width: 35px;
+	float: left;
+}
+
+header{
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.53) 0%, rgba(0,0,0,0.53) 1%, rgba(0,0,0,0.15) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.53) 0%,rgba(0,0,0,0.53) 1%,rgba(0,0,0,0.15) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.53) 0%,rgba(0,0,0,0.53) 1%,rgba(0,0,0,0.15) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87000000', endColorstr='#26000000',GradientType=0 ); /* IE6-9 */
+    height: 100px;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.contenedorHeader{
+	max-width: 1110px;
+	height: 100%;
+	/*border: 1px solid black;*/
+	margin: 0 auto;
+}
+
+.imgHeader{
+	width: 115px;	
+	height: 90px;
+	margin-top: 2.5px;
+	display: inline-block;
+	float: left;
+}
+
+.input-group-buscar{
+	width: 50%;
+	float: left;
+	margin-top: 35px;
+	margin-left: 40px;
+}
+
+.contenedorMiPerfil{
+	height: 100px;
+	width: 31%;
+	/*border: 1px solid black;*/
+	float: left;
+}
+
+.imgPerfil{
+	width: 59px;
+	height: 59px;
+	border-radius: 50%;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+.nombreSession{
+	/*border: 1px solid black;*/
+	width: 71%;
+	box-sizing: border-box;
+	color: white;
+	font-size: 20px;
+	height: 30%;
+	margin-top: 10%; 
+	float: right;
+
+}
+
+.contenedorCerrarSesion{
+	height: 100px;
+	color: white;
+	text-align: right;
+	font-size: 25px;
+	box-sizing: border-box;
+	padding-top: 34px;
+	width: 20px;
+	float: right;
+}
+
+.contenedorCerrarSesion:hover{
+	cursor: pointer;
+	color: #A4A4A4;
+}
+
+footer{
+	height: 50px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+99&0+0,0.68+79 */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.68) 79%, rgba(0,0,0,0.68) 99%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.68) 79%,rgba(0,0,0,0.68) 99%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.68) 79%,rgba(0,0,0,0.68) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#ad000000',GradientType=0 ); /* IE6-9 */
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.main{
+	position: fixed;
+	top: 100px;
+	bottom: 50px;
+	left: 0;
+	right: 0;
+	box-sizing: border-box;
+}
+
+.contenedorMain{
+	max-width: 1110px;
+	margin: 0 auto;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.contenedorContactos{
+	width: 300px;
+	height: 100%;
+	background: #EDEDED;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.contenedorChat{
+	width: 810px;
+	background: url('../img/p4.png');	
+	display: inline-block;
+	box-sizing: border-box;
+	position: fixed;
+	top: 100px;
+	bottom: 50px;
+}
+
+.contenedorOpciones{
+	text-align: center;
+}
+.contenedorNoCharla{
+	padding-top: 5%;
+	display: block;
+}
+
+.imgChatNoCharla{
+	width: 20%;
+	height: auto;
+	margin-top: 5%;
+}
+
+.contenedorCharla{
+	width: 100%;
+	height: 100%;
+	display: none;
+	/*border: 1px solid black;*/
+}
+
+.charlaDestinatario{
+	width: 100%;
+	height: 8%;
+	/*border: 1px solid black;*/
+	background: #F5F5F5;
+	padding: 1%;
+	box-sizing: border-box;
+}
+
+.imgChat{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.imgChatContacto{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+
+.contenedorImagen{	
+	width: 50px;
+	height: 50px;
+}
+
+.charlaMensajes{
+	width: 100%;
+	height: 85%;
+	overflow-y: auto;
+	box-sizing: border-box;
+	padding: 15px;
+	overflow-x: hidden;
+}
+
+.charlaEscribr{
+	width: 100%;
+	height: 7% !important;
+	/*border: 1px solid black;*/
+	background: #F5F5F5 !important;
+	box-sizing: border-box;
+}
+
+.contenedorInputEscribir{
+	width: 90%;
+	/*border: 1px solid black;*/
+	height: 100%;
+	padding-top: 1.5%;
+	padding-left: 2%;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.contenedorInputEscribir{
+	width: 90%;
+	/*border: 1px solid black;*/
+	height: 100%;
+	padding-top: 1.5%;
+	padding-left: 2%;
+}
+
+#txtEscribir{
+	border: 1px solid white;
+}
+
+.contenedorIconoEscribir{
+	width: 5%;
+	box-sizing: border-box;
+	display: inline-block;
+	float: right;
+	font-size: 28px;
+	color: #A1A1A1;
+	padding-top: 1.5%;
+	padding-right: 2%;
+}
+
+.contenedorIconoEscribir:hover{
+	cursor: pointer;
+	color:#EDEDED;
+}
+
+.contenedorImagen{
+	/*border: 1px solid black;*/
+	margin-left: 1.5%;
+	display: inline-block;
+}
+
+.contenedorNombreChat{
+	width: 70%;
+	display: inline-block;
+	font-size: 18px;
+	color: #A1A1A1;
+	/*padding-top: 15px;*/
+	margin-left: 10px;
+	height: 100%;
+}
+
+.contenedorNombreChatContacto{
+	width: 70%;
+	display: inline-block;
+	font-size: 18px;
+	color: #A1A1A1;
+	/*padding-top: 15px;*/
+	margin-left: 10px;
+	height: 100%;
+}
+
+.chatMensajeMio{
+	/*border: 1px solid black;*/
+	padding: 10px 9px;
+	font-size: 18px;
+}
+
+.chatFlechaMia{
+	display: inline-block;
+	margin-left: -8px;
+	margin-top: 18px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid #C9DAF3;
+	float: right;
+}
+
+.chatContenidoMensajeMio{
+	border-radius: 5px;
+	color: white;
+	display: inline-block;
+	padding: 7px 10px;
+	max-width: 75%;
+	position: relative;
+	vertical-align: top;
+	color: black;
+	background: #C9DAF3;
+	float: right;
+	margin-right: 7px;
+	text-align: right;
+	margin-top: 10px;
+	/*width: 280px;*/
+}
+
+.chatHoraMia{
+	color: grey;
+	font-size: 18px;
+	width: 100%;
+	margin-top: 7px;
+	text-align: right;
+	display: block;
+	margin-right: 15px;
+	/*border: 1px solid black;*/
+	float: right;
+	margin-bottom: 15px;
+
+}
+
+
+.chatMensajeOtro{
+	/*border: 1px solid black;*/
+	padding: 10px 9px;
+	font-size: 18px;
+}
+
+.chatFlechaOtro{
+	display: inline-block;
+	margin-left: 8px;
+	margin-top: 18px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-right: 15px solid white;
+	float: left;
+}
+
+.chatContenidoMensajeOtro{
+	border-radius: 5px;
+	color: white;
+	display: inline-block;
+	padding: 7px 10px;
+	max-width: 75%;
+	position: relative;
+	vertical-align: top;
+	color: black;
+	background: white;
+	float: left;
+	text-align: left;
+	margin-top: 10px;
+	/*width: 280px;*/
+}
+
+.chatHoraOtro{
+	color: grey;
+	font-size: 18px;
+	width: 100%;
+	margin-top: 7px;
+	text-align: left;
+	display: block;
+	margin-left: 25px;
+	/*border: 1px solid black;*/
+	float: left;
+	margin-bottom: 15px;
+
+}
+
+.contenedorContactos{
+	overflow-y: auto;
+
+}
+
+.contactoData{
+	width: 100%;
+	border-bottom: 1px solid #A1A1A1;
+	padding: 15px 0;
+}
+
+.contactoData:hover{
+	cursor: pointer;
+	background: #F5F5F5;
+}
